@@ -1,0 +1,22 @@
+
+@import "./sass/colors.scss";
+@import "./sass/responsive-size.scss";
+
+
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@import "./sass/menu.scss";
+@import "./sass/section_app.scss";
+@import "./sass/footer.scss";
+@import "./sass/modal.scss";
+@import "./sass/slider.scss";

@@ -1,0 +1,182 @@
+//body
+body {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  line-height: 1.6;
+  background-size: cover;
+}
+
+
+.header {
+  top: 0px;
+  width: 100%;
+  position: fixed;
+  z-index: 30;
+}
+
+//nav
+.nav-logo {
+  width: 15%;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 25px 0;
+  justify-content: space-around;
+  min-height: 8vh;
+  background-color: var(--primary-color-background);
+}
+
+.menu-links {
+  flex-direction: column;
+  padding: 0;
+  justify-content: normal;
+  align-items: center;
+  height:91vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: none;
+  opacity: 0;
+
+  &__section {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    &:hover {
+      background-color: var(--primary-colorlight-background);
+    }
+  }
+
+  & li {
+    text-decoration: none;
+    font-size: 2.1rem;
+    color: var(--primary-color-text);
+    font-weight: 600;
+
+    &:hover {
+      color: var(--item-selected-color);
+    }
+  }
+}
+
+.handmade-icon {
+  display: block;
+  position: absolute;
+  top: 18px;
+  right: 32px;
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  transition: 0.2s 0.1s;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+
+  span {
+    display: block;
+    background-color: var(--primary-color-text);
+    height: 3px;
+    width: 28px;
+    margin: 5px auto;
+    border-radius: 2px;
+  }
+}
+
+@keyframes menuShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.menu-links.activated {
+  display: flex;
+  animation: menuShow 400ms ease-in-out both;
+}
+
+.brtop.animed {
+  transform: rotate(45deg) ;
+}
+
+.brmid.animed {
+  opacity: 0;
+}
+
+.brbot.animed {
+  transform: rotate(45deg) ;
+}
+
+//Tablet -----------------------------------------------------------------
+@media (min-width: $bp-medium) {
+  .handmade-icon {
+    display: none;
+  }
+
+  .nav-menu {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-logo {
+    width: 100px;
+    margin-left: 15px;
+  }
+
+  .menu-links {
+    display: contents;
+    & li {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+}
+
+//Desktop -----------------------------------------------------------------
+@media (min-width: $bp-large) {
+  
+  .handmade-icon {
+    display: none;
+  }
+  .nav-logo {
+    width: 80px;
+    margin-left: 15px;
+    padding: 10px;
+  }
+
+  .nav-menu {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menu-links {
+    display: contents;
+
+    & li {
+      font-size: 2.1rem;
+      cursor: pointer;
+    
+      &.activated {
+        background-color: var(--shadow-color-text);
+      }
+
+    }
+  }
+}

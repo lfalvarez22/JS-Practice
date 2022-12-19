@@ -1,0 +1,62 @@
+/* The Modal */
+.modal {
+  display: block; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: var(--primary-color-text); 
+  background-color: var(--opacity); 
+}
+
+/* Modal text*/
+.modal-content {
+  background-color: var(--primary-color-background);
+  margin: 30% auto;
+  border: 5px solid var(--primary-color-text);
+  width: 80%;
+  height: 13%;
+
+  & p {
+    text-decoration:none;
+    font-size: 2.1rem;
+    color: var(--primary-color-text);
+    font-weight: 600;
+  }
+}
+
+/* Modal Button */
+.close {
+  color: var(--primary-color-text);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.close:hover, .close:focus {
+  color: var(--item-selected-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+//Tablet -----------------------------------------------------------------
+@media (min-width: $bp-medium) {
+  .modal-content {
+    width: 45%; 
+    height: 8%;
+  }
+}
+
+//Desktop -----------------------------------------------------------------
+@media (min-width: $bp-large) {
+  .modal-content {
+    width: 30%; 
+    height: 10%;
+  }
+}

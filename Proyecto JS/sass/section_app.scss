@@ -1,0 +1,88 @@
+
+.main {
+  margin-top: 9rem;
+}
+
+.section {
+    isolation: isolate;
+    z-index: 1;
+    position: relative;
+    padding-bottom: 50px;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    padding: 0 8%;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  & a {
+    color:var(--primary-color-text);
+    padding: 10px;
+    background-color: var(--primary-colorlight-background);
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid var(--primary-color-background);
+    }
+  }
+
+  &__tittle {
+    text-transform: uppercase;
+    color: var(--primary-color-background);
+    font-size: 20px;
+
+  }
+  
+  &__text {
+      padding: 0 30px;
+      font-size: 12px;
+  }
+  
+
+}
+
+hr {
+  width: 80%;
+}
+
+#section-1 {
+    margin-top: -10px;
+}
+
+
+//Tablet -----------------------------------------------------------------
+@media (min-width: $bp-medium) {
+  .section {
+    &__btn {
+      top: 75%;
+    }
+    &__text {
+      width: 70%;
+      margin: 0 auto;
+      padding-bottom: 30px;
+      font-size: 14px;
+    }
+  }
+}
+
+//Desktop -----------------------------------------------------------------
+@media (min-width: $bp-large) {
+  .section {
+    &__btn {
+      top: 80%;
+    }
+    &__text {
+      width: 50%;
+      margin: 0 auto;
+      padding-bottom: 30px;
+      font-size: 14px;
+    }
+  }
+
+}
+  
